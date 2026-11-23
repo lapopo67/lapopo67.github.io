@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="crumbs"><a href="{{ '/' | relative_url }}">Home</a> › <a href="{{ '/category/' | append: page.categories[0] | append: '/' | relative_url }}">{{ page.categories[0] | replace: '-', ' ' | capitalize }}</a></p>
+  <h1>{{ page.title }}</h1>
+  <p class="meta">Updated {{ page.last_modified_at | default: page.date | date: "%B %-d, %Y" }}</p>
+  <p class="notice">We may earn a commission when you buy through links on this page, at no extra cost to you.</p>
+  {{ content }}
+</article>
+
+{% assign related = site.posts | where_exp: "p", "p.categories contains page.categories[0]" | where_exp: "p", "p.url != page.url" %}
+{% if related.size > 0 %}
+<section class="related">
+  <h2>More guides</h2>
+  <ul>
+  {% for p in related limit: 4 %}
+    <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+  {% endfor %}
+  </ul>
+</section>
+{% endif %}

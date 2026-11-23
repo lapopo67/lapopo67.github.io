@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
+<p class="lead">{{ page.description }}</p>
+{% assign posts = site.categories[page.category] %}
+{% if posts and posts.size > 0 %}
+<div class="cards">
+  {% for p in posts %}
+  <a class="card" href="{{ p.url | relative_url }}">
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.description }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% else %}
+<p>New guides in this category are on the way.</p>
+{% endif %}

@@ -1,0 +1,28 @@
+title: SmartPick Guide
+description: Honest, research-based buying guides that help you pick the right product the first time.
+url: "https://lapopo67.github.io"
+baseurl: ""
+lang: en
+
+# Amazon Associates tracking tag (e.g. "yourtag-20").
+# Leave empty until the Associates account is created; links still work without it.
+amazon_tag: ""
+
+permalink: /:categories/:title/
+timezone: America/New_York
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - bot/

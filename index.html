@@ -1,0 +1,25 @@
+---
+layout: default
+title: SmartPick Guide — Honest buying guides
+---
+<section class="hero">
+  <h1>Pick the right product the first time.</h1>
+  <p>We read the expert reviews, compare the specs that matter, and boil it down to clear picks for every budget.</p>
+</section>
+
+<h2>Latest guides</h2>
+<div class="cards">
+  {% for p in site.posts limit: 12 %}
+  <a class="card" href="{{ p.url | relative_url }}">
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.description }}</p>
+  </a>
+  {% endfor %}
+</div>
+
+<h2>Browse by category</h2>
+<div class="cards">
+  <a class="card" href="{{ '/category/electronics/' | relative_url }}"><h3>Electronics</h3><p>Earbuds, chargers, and everyday tech.</p></a>
+  <a class="card" href="{{ '/category/personal-care/' | relative_url }}"><h3>Personal care</h3><p>Oral care, grooming, and health gadgets.</p></a>
+  <a class="card" href="{{ '/category/home/' | relative_url }}"><h3>Home</h3><p>Kitchen, cleaning, and home essentials.</p></a>
+</div>

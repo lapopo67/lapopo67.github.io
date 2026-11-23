@@ -1,0 +1,7 @@
+{%- comment -%}
+Amazon search link with the Associates tag.
+Usage: {% include amzn.html q="EarFun Air Pro 4+" label="Check price on Amazon" %}
+{%- endcomment -%}
+{%- assign label = include.label | default: "Check price on Amazon" -%}
+{%- capture href -%}https://www.amazon.com/s?k={{ include.q | url_encode }}{% if site.amazon_tag != "" %}&tag={{ site.amazon_tag }}{% endif %}{%- endcapture -%}
+<a class="buy" href="{{ href }}" target="_blank" rel="sponsored nofollow noopener">{{ label }} →</a>

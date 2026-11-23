@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">Smart<span>Pick</span> Guide</a>
+      <nav>
+        <a href="{{ '/category/electronics/' | relative_url }}">Electronics</a>
+        <a href="{{ '/category/personal-care/' | relative_url }}">Personal care</a>
+        <a href="{{ '/category/home/' | relative_url }}">Home</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p class="disclosure">As an Amazon Associate I earn from qualifying purchases. Prices and availability change; always check the current price on Amazon before you buy.</p>
+      <p>
+        <a href="{{ '/disclosure/' | relative_url }}">Affiliate disclosure</a> ·
+        <a href="{{ '/privacy/' | relative_url }}">Privacy</a> ·
+        <a href="{{ '/about/' | relative_url }}">About</a>
+      </p>
+      <p class="small">© {{ 'now' | date: '%Y' }} {{ site.title }}</p>
+    </div>
+  </footer>
+</body>
+</html>
