@@ -56,6 +56,17 @@ These are the rules for the scheduled task that adds one new buying guide per da
 - Commit with a message like `Add guide: Best … (YEAR)` and push to `main`.
 - After pushing, write one line in the run summary: the post title and its URL (`https://lapopo67.github.io/<category>/<slug>/`).
 
+## 5. Pinterest pin (via the Buffer connector)
+
+- Generate a 1000×1500 pin image with `bot/pin.py` (Pillow + Inter fonts):
+  ```
+  python3 -c "import sys; sys.path.insert(0,'bot'); from pin import make; make('assets/pins/<slug>.png','2026 buying guide','<Short title, max ~32 chars>',['Pick 1','Pick 2','Pick 3','Pick 4','Pick 5'],'<hex accent>')"
+  ```
+  Keep each list item under ~22 characters. Open the image and check nothing overlaps. Commit and push it with the post, then wait ~90 seconds for GitHub Pages to deploy and confirm `https://lapopo67.github.io/assets/pins/<slug>.png` loads.
+- Buffer: organization "My organization" (`6b04d9b12b54d5724bdb2fac`), Pinterest channel `6b04da3e8541f09ecb80d081`, board "Best Product Picks 2026" (boardServiceId `979744162626574663`). Re-check with `get_channel` if a call fails.
+- Call `create_post` with `schedulingType: automatic`, mode `addToQueue`, the image as asset (with alt text), `metadata.pinterest` = { title, url (the new guide's URL), boardServiceId }, and a 2–3 sentence description ending with 4–5 relevant hashtags.
+- If the Buffer connector is unavailable or errors twice, skip the pin and say so in the run summary; the post itself is still the priority.
+
 ## Never
 
 - Never change `_config.yml` (including `amazon_tag`), layouts, or legal pages (`disclosure.md`, `privacy.md`) unless the owner asks.
