@@ -6,7 +6,7 @@ lang: en
 
 # Amazon Associates tracking tag (e.g. "yourtag-20").
 # Leave empty until the Associates account is created; links still work without it.
-amazon_tag: ""
+amazon_tag: "smartpickgu0a-20"
 
 permalink: /:categories/:title/
 timezone: America/New_York
