@@ -8,6 +8,13 @@ These are the rules for the scheduled task that adds one new buying guide per da
 - If the queue is empty, choose a new evergreen "best X" topic with real search demand in one of the categories: `electronics`, `personal-care`, `home`. Never repeat an existing guide.
 - Move the chosen topic from **Queue** to **Published** in `bot/topics.md` with today's date.
 
+### Site focus: oral and dental care
+
+- The site is becoming a specialist oral-care buying-guide site. Use the `personal-care` category for these posts.
+- Base dental claims on established sources (ADA, NHS, peer-reviewed reviews such as Cochrane, major dental schools) in addition to product reviews, and keep them general and accurate (e.g. soft bristles, 2 minutes twice daily, cleaning between teeth daily, replacing heads about every 3 months).
+- Never give individual diagnosis or treatment advice, never claim a product treats or cures a condition, and never state or imply that a dentist reviewed or wrote the post. End every oral-care post with: *This guide is general information, not personal dental advice. Ask your dentist which products suit your teeth and gums, especially if you have gum disease, implants, braces, or sensitivity.*
+- Product types like night guards and whitening kits: mention when a dentist-made option is the better choice.
+
 ## 2. Research (required)
 
 - Run several web searches for current (this year) independent reviews of the topic: e.g. Wirecutter, RTINGS, TechRadar, Tom's Guide, Consumer Reports, SoundGuys, Expert Reviews, Engadget, Popular Science.

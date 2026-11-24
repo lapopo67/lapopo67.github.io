@@ -1,15 +1,28 @@
 ---
 layout: default
-title: Honest buying guides
+title: Honest oral care buying guides
 ---
 <section class="hero">
-  <h1>Pick the right product the first time.</h1>
-  <p>We read the expert reviews, compare the specs that matter, and boil it down to clear picks for every budget.</p>
+  <h1>Better brushing, flossing and whitening — without the guesswork.</h1>
+  <p>Clear, research-based guides to electric toothbrushes, water flossers and everyday oral care, with picks for every budget.</p>
 </section>
+
+{% assign oral = site.categories['personal-care'] %}
+{% if oral and oral.size > 0 %}
+<h2>Oral care guides</h2>
+<div class="cards">
+  {% for p in oral limit: 12 %}
+  <a class="card" href="{{ p.url | relative_url }}">
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.description }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endif %}
 
 <h2>Latest guides</h2>
 <div class="cards">
-  {% for p in site.posts limit: 12 %}
+  {% for p in site.posts limit: 6 %}
   <a class="card" href="{{ p.url | relative_url }}">
     <h3>{{ p.title }}</h3>
     <p>{{ p.description }}</p>
@@ -19,7 +32,7 @@ title: Honest buying guides
 
 <h2>Browse by category</h2>
 <div class="cards">
+  <a class="card" href="{{ '/category/personal-care/' | relative_url }}"><h3>Oral &amp; personal care</h3><p>Toothbrushes, flossers, whitening and more.</p></a>
   <a class="card" href="{{ '/category/electronics/' | relative_url }}"><h3>Electronics</h3><p>Earbuds, chargers, and everyday tech.</p></a>
-  <a class="card" href="{{ '/category/personal-care/' | relative_url }}"><h3>Personal care</h3><p>Oral care, grooming, and health gadgets.</p></a>
   <a class="card" href="{{ '/category/home/' | relative_url }}"><h3>Home</h3><p>Kitchen, cleaning, and home essentials.</p></a>
 </div>
