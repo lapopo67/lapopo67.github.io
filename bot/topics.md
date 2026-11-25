@@ -3,7 +3,6 @@
 Focus: oral and dental care. Publish oral-care topics first; general topics only when the oral-care queue is empty.
 
 ## Queue
-- best-sonic-toothbrush | personal-care | Best Sonic Toothbrush
 - best-toothbrush-for-sensitive-teeth | personal-care | Best Electric Toothbrush for Sensitive Teeth and Gums
 - best-teeth-whitening-strips | personal-care | Best Teeth Whitening Strips
 - best-kids-electric-toothbrush | personal-care | Best Kids' Electric Toothbrush
@@ -34,3 +33,4 @@ Focus: oral and dental care. Publish oral-care topics first; general topics only
 - best-electric-toothbrush | personal-care | 2026-11-23
 - best-portable-power-bank | electronics | 2026-11-23
 - best-water-flosser | personal-care | 2026-11-24
+- best-sonic-toothbrush | personal-care | 2026-11-25
