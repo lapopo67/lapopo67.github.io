@@ -3,7 +3,6 @@
 Focus: oral and dental care. Publish oral-care topics first; general topics only when the oral-care queue is empty.
 
 ## Queue
-- best-teeth-whitening-strips | personal-care | Best Teeth Whitening Strips
 - best-kids-electric-toothbrush | personal-care | Best Kids' Electric Toothbrush
 - best-cordless-water-flosser-for-travel | personal-care | Best Cordless Water Flosser for Travel
 - best-toothbrush-for-braces | personal-care | Best Toothbrush for Braces
@@ -34,3 +33,4 @@ Focus: oral and dental care. Publish oral-care topics first; general topics only
 - best-water-flosser | personal-care | 2026-11-24
 - best-sonic-toothbrush | personal-care | 2026-11-25
 - best-toothbrush-for-sensitive-teeth | personal-care | 2026-11-26
+- best-teeth-whitening-strips | personal-care | 2026-11-27
